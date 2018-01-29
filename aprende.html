@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hablando EnSeñas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/gifs-señas.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="js/jquery3-2-1.js"></script>
+    <script src="js/buttonToogle.js"></script>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="css/boton.js"></script>
+
+
+
+    <!-- Aumentar texto -->
+    <script type="text/javascript" src="js/jquerytextresizer.js"></script>
+
+    <script type="text/javascript" src="js/textresizer.js">
+    </script>
+
+    <script type="text/javascript">
+        var mytextsizer = new fluidtextresizer({
+            controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+            targets: ["body", "nav", "button", "li"], //target elements to resize text within: ["selector1", "selector2", etc]
+            levels: 7, //number of levels users can magnify (or shrink) text
+            persist: "session", //enter "session" or "none"
+            animate: 200 //animation duration of text resize. Enter 0 to disable
+        })
+    </script>
+
+    <!-- Fin Aumentar Texto -->
+
+    <style>
+        .social {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .social ul {
+            margin: 0;
+            padding: 5px;
+        }
+        
+        .social ul li {
+            margin: 5px;
+            list-style: none outside none;
+            display: inline-block;
+        }
+        
+        .social i {
+            width: 40px;
+            height: 40px;
+            color: #FFF;
+            background-color: #909AA0;
+            font-size: 22px;
+            text-align: center;
+            padding-top: 12px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -o-border-radius: 50%;
+            transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+        }
+        
+        .social i:hover {
+            color: #FFF;
+            text-decoration: none;
+            transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+        }
+        
+        .social .fa-facebook:hover {
+            background: #4060A5;
+        }
+        
+        .social .fa-twitter:hover {
+            background: #00ABE3;
+        }
+        
+        .social .fa-instagram:hover {
+            background: #375989;
+        }
+        
+        .social .fa-vimeo-square:hover {
+            background: #83DAEB;
+        }
+        
+        .social .fa-stack-overflow:hover {
+            background: #FEA501;
+        }
+        
+        .social .fa-dropbox:hover {
+            background: #017FE5;
+        }
+        
+        .social .fa-stack-exchange:hover {
+            background: #4D86C9;
+        }
+        
+        .social .fa-youtube:hover {
+            background: #FF1F25;
+        }
+        
+        .social .fa-rss:hover {
+            background: #e88845;
+        }
+        
+        .social .fa-youtube-play:hover {
+            background: #DF192A;
+        }
+        
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .social-circle li i {
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+        }
+        
+        .social-circle li a:hover i,
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .social-circle i {
+            color: #fff;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="navigation">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="banner" class="dropdown">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        
+                                                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+                        
+                                            </button>
+
+                    <a class="navbar-brand" href="index.html">
+                        <h1><img src="images/logo.png" alt="logo Hablando EnSeñas"></h1>
+                    </a>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <div id="sizecontroldiv" class="controlstyle">
+
+
+                                <a href="#smaller" style="background-color: transparent"><img src="images/fontminus.gif" alt="Minimizar tamaño letra" title="Disminuir el tamaño de la letra" /></a>
+                                <a href="#bigger" style="background-color: transparent"><img src="images/fontplus.gif" alt="Maximizar tamaño letra" / title="Aumentar el tamaño de la letra"></a><br /><br /> </div>
+                        </li>
+
+                        <li><a href="index.html" id="numero1" class="tooltip1" href="gifs-señas.css"><span><img src="gifs/bienvenidos.gif"></span>Bienvenidos</a></li>
+
+                        <li class="scroll"><a href="#about-us" id="numero2" class="tooltip2" href="gifs-señas.css"><span><img src="gifs/quienessomos.gif"></span>Quiénes Somos</a></li>
+
+                        <li class="scroll"><a href="#blog" id="numero3" class="tooltip3" href="gifs-señas.css"><span><img src="gifs/nuestrosservicios.gif"></span>Nuestros Servicios</a></li>
+
+                        <li class="scroll"><a href="#contact" id="numero4" class="tooltip4" href="gifs-señas.css"><span><img src="gifs/contactenos.gif"></span>Contáctenos</a></li>
+
+
+
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <!--/navbar-->
+
+    </header>
+
+
+
+
+    <div class="container-fluid text-left; fondo" style="margin-top:120px" background="images/fondo.jpg">
+
+
+        <div class="row content fondoSection ">
+            <div class="col-sm-2 sidenav side" id="bordeAside" style="height: auto; ">
+
+
+
+
+                <div class="btn-group" style="margin-top:18%">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/abc.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="introduccionAbece.html"><b style="color:red">Tutorial Abecedario </b> </a>
+                        </li>
+                        <li><a href="adivinaAbece.html">Adivina la letra</a></li>
+                        <li><a href="botonAbece.html">¿Cúal es la respuesta Correcta?</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group" style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/meses.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionMeses.html"><b style="color:red">Tutorial Meses del Año </b></a></li>
+                        <li><a href="adivinMeses.html">Adivina la palabra</a></li>
+                        <li><a href="botonesMeses.html">¿Cúal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoMeses.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group" style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/colores.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionColores.html"><b style="color:red">Tutorial Colores </b></a></li>
+                        <li><a href="adivinaColores.html">Adivina la palabra</a></li>
+                        <li><a href="botonColores.html">¿Cúal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoColores.html">Ahorcado</a></li>
+
+
+                    </ul>
+
+                </div>
+
+                <div class="btn-group " style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle " data-toggle="dropdown">  <img src="images/infoPersonal.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionPresentacion.html"><b style="color:red">Tutorial Información Personal </b></a></li>
+                        <li><a href="adivinaPresentacion.html">Adivina la palabra</a></li>
+                        <li><a href="botonesPresentacion.html">¿Cúal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoPresentacion.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="btn-group " style="margin-top:25% ">
+                    <button type="button" class="btn dropdown-toggle " data-toggle="dropdown">  <img src="images/saludos.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionSaludos.html"><b style="color:red">Tutorial Saludos </b></a></li>
+                        <li><a href="adivinaSaludos.html">Adivina la palabra</a></li>
+                        <li><a href="botonSaludos.html">¿Cúal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoSaludos.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="btn-group" style="margin-top:25%; margin-bottom: 4% ">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">  <img src="images/dias.jpg" class="asideB" alt=""></button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="introduccionSemanas.html"><b style="color:red">Tutorial Días de la semana </b></a></li>
+                        <li><a href="adivinaSemanas.html">Adivina la palabra</a></li>
+                        <li><a href="botonSemanas.html">¿Cúal es la respuesta Correcta?</a></li>
+                        <li><a href="ahorcadoSemanas.html">Ahorcado</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col-sm-9 text-center imagenFondo bordeDiv">
+                <div class="dropdown">
+                    <div>
+                        <p style=""></p>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- TEXTO-->
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal fade" id="myModal" role="dialog" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Abecedario</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="ventana_modal"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.reload()">cerrar</button>
+                            <button type="button" class="btn btn-primary" id="btnInco" data-dismiss="modal" onclick="limpiar(); window.location.reload()">Intentalo de nuevo</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- FIN Modal  Incorrecto-->
+
+
+
+
+
+        </div>
+        <div class="col-sm-2 sidenav">
+
+        </div>
+    </div>
+    </div>
+
+    <footer class="container-fluid; foter " style="background: #9dc548">
+
+
+        <div class="row">
+            <p class="alignleft" id="modificacion">Ultima actualización: 10 de Noviembre de 2017 10:00 am</p>
+            <p class="alignright"> Numero de visitas: <img src="https://counter8.freecounter.ovh/private/contadorvisitasgratis.php?c=shxakl9f4dl5m259sgd6f2cj1zb2wa92" border="0"></p>
+        </div>
+
+        <hr />
+
+        <div>
+            <p class="pFoter"> <b>Correos electrónicos: </b>
+                <a href="https://www.hotmail.com" target="_blank"><b>info@hablandoensenas.com<b></a></p>
+            <a href="https://www.gmail.com" target="_blank"> <b style="margin-left: 10.1%">hablandoensenas@gmail.com<b></a></p>
+        
+
+
+            <p class="pFoter">Linea de atención: 310 2035937 / 316 2558876 </p>
+
+            
+
+        </div>
+
+
+
+        <div style="text-align: center">
+
+            <div class="container">
+                <div class="row">
+                    <div class="social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
+                            
+                            <li><a href="#"><i class="fa fa-lg fa-youtube"></i></a></li>
+                            
+                            <li><a href="#"><i class="fa fa-lg fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12">
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>				
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-md-12">
+           			
+        </div>
+<!--
+        <div class="container-fluid text-center">
+            <a href="politicas.html" class="politica">Política de privacidad | <a href="#" class="politica">Condiciones de Uso</a></a>
+
+        </div>
+    -->
+    </footer>
+
+</body>
+
+</html>
