@@ -91,7 +91,7 @@
             align-content: center;
             justify-content: space-around;
             padding: 10px;
-            margin: 10px;
+            margin: 4px;
             height: auto;
         }
         
@@ -105,12 +105,12 @@
             align-content: center;
             justify-content: space-around;
             padding: 10px;
-            margin: 10px;
+            margin: 4px;
             height: auto;
         }
         
         .cambiar:hover {
-            background-color: azure;
+            background-color: darkcyan;
         }
         
         .column {
@@ -120,7 +120,7 @@
             -ms-flex: 1;
             flex: 1;
             padding: 10px;
-            margin: 10px;
+            margin: 4px;
             height: auto;
         }
         
@@ -241,6 +241,14 @@
             background-color: #D3D3D3;
         }
         
+        .asideIzquierdo button {
+            height: 130px;
+        }
+        
+        .asideDerecho button {
+            height: 130px;
+        }
+        
         @media (max-width: 600px) {
             .container-cajas {
                 /*-webkit-flex-direction: column;
@@ -248,6 +256,10 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
+        
+        @media (max-width: 924px) and (min-width: 637px) {
+            .asideIzquierdo {}
         }
     </style>
 </head>
@@ -384,7 +396,7 @@
                 <br>
                 <br>
 
-                <p style="text-align: left; font-size: 16px; margin-top: 26px ">
+                <p style="text-align: left; font-size: 16px; margin-top: 28px ">
                     Hola Bienvenidos a la práctica de Hablando EnSeñas aquí encontrará tres formas de aprender parte del vocabulario básico de la lengua de señas Colombiana, todo esto a través de la didáctica y el juego.
                 </p>
                 <br>
@@ -416,7 +428,7 @@
 
             </div>
         </div>
-        <div class="asideDerecho ">
+        <div class="asideDerecho cambiar ">
             <div class="btn-group ">
                 <button type="button" class="btn dropdown-toggle " data-toggle="dropdown">  <img style="width: 100%" src="images/infoPersonal.png" class="asideB" alt=""></button>
 
