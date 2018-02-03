@@ -47,7 +47,7 @@
 
 	<script src="js/respond.min.js"></script> <![endif]-->
 
-    <link rel="shortcut icon" href="images/icono/manoM.png">
+    <link rel="shortcut icon" href="images/icono/manos.png">
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
 
@@ -64,7 +64,28 @@
     <link rel="stylesheet" href="css/services-responsive.css">
 
 
+    <script>
+        function Scroll() {
+            var contentTop = [];
+            var contentBottom = [];
+            var winTop = $(window).scrollTop();
+            var rangeTop = 200;
+            var rangeBottom = 500;
+            $('.navbar-collapse').find('.scroll a').each(function() {
+                contentTop.push($($(this).attr('href')).offset().top);
+                contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
+            })
+            $.each(contentTop, function(i) {
+                if (winTop > contentTop[i] - rangeTop) {
+                    $('.navbar-collapse li.scroll')
+                        .removeClass('active')
+                        .eq(i).addClass('active');
+                    alert('purbea');
+                }
+            })
 
+        };
+    </script>
 
 
     <script type="text/javascript" src="js/jquerytextresizer.js"></script>
@@ -79,7 +100,7 @@
             targets: ["body", "nav", "button", "li", "p", "h1", "h2", "h3", "a", "ul"], //target elements to resize text within: ["selector1", "selector2", etc]
             levels: 7, //number of levels users can magnify (or shrink) text
             persist: "session", //enter "session" or "none"
-            animate: 10 //animation duration of text resize. Enter 0 to disable
+            animate: 200 //animation duration of text resize. Enter 0 to disable
         })
     </script>
 
@@ -92,31 +113,6 @@
     <script type="text/javascript" src="js/traductor.js"></script>
     <script type="text/javascript" src="js/accesibilidad.js"></script>
 
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '196362604440914',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v2.12'
-            });
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_ES/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-
-
-
 
 
 
@@ -126,10 +122,6 @@
 <!--/head-->
 
 <body>
-
-    <div class="fb-customerchat" page_id="172342229869306">
-
-    </div>
 
     <div class="preloader">
 
@@ -200,7 +192,7 @@
 
                         </li>
 
-                        <li class=" dropdown"><a href="#" id="numero5" class="tooltip4"><span></span><button class="dropbtn">ACCESIBILIDAD<i class="fa fa-caret-down"></i></button></a>
+                        <li class="scroll dropdown"><a href="#" id="numero5" class="tooltip4"><span></span><button class="dropbtn">ACCESIBILIDAD<i class="fa fa-caret-down"></i></button></a>
 
                             <div class="dropdown-content">
                                 <button style="font-family: italic" class="dropbtn" onclick="fondoGris()">Escala de grises</button>
@@ -470,27 +462,11 @@
 
 
                                     <div style="width: 100%; display:flex; flex-direction: row; height: auto; align-items: center">
-                                        <div class="media-body" style="width: 50% "> <iframe width="100%" height="370" src="https://www.youtube.com/embed/A9O__GaiuaU" frameborder="0" allowfullscreen></iframe> </div>
+                                        <div class="media-body" style="width: 50% "> <iframe width="100%" height="360" src="https://www.youtube.com/embed/A9O__GaiuaU" frameborder="0" allowfullscreen></iframe> </div>
+                                        <p style="width: 50% ; font-size:20px; margin-left: 20px  ">Somos una empresa comprometida con la inclusión social e igualdad de condiciones, que respeta las diferencias, cuyo enfoque principal es la Comunidad Sorda y su acceso a la comunicación e información.</p>
 
-                                        <div style="width: 50%">
-                                            <p style="width: 90% ; font-size:18px; margin-left: 20px; text-align: justify  ">Somos una entidad con enfoque social que vela por el derecho al acceso a la comunicación e información de las personas con discapacidad, cuyo enfoque principal es la población con discapacidad sensorial.
-
-                                            </p>
-                                            <p style="width: 90% ; font-size:18px; margin-left: 20px; text-align: justify  ">Nuestro grupo de trabajo se encuentra conformado por un equipo interdisciplinario altamente calificado, integrado por personas sordas, ciegas y oyentes quienes ponen a su disposición todo su talento y experticia.
-
-                                            </p>
-
-                                            <p style="width: 90% ; font-size:18px; margin-left: 20px; text-align: justify  ">Es nuestro objetivo trabajar en equipo con las entidades, organizaciones, instituciones y/o personas naturales, con el propósito que mancomunadamente logremos consolidar ajustes razonables accesibles e incluyentes
-                                                para la comunidad.
-
-
-                                            </p>
-
-
-                                        </div>
 
                                     </div>
-
 
 
                                 </div>
@@ -1088,10 +1064,7 @@
 
                         <li style="text-align: justify ">Diseño de señalética accesible con textos en español e inglés, lengua de señas, pictograma, texto en alto relieve y braille.</li>
                         <br>
-                        <li style="text-align: justify ">Asesoría y diseño de páginas web accesibles: Gifs, subtitulación, voz off, Lengua de Señas Colombiana, audio descripción y demás criterios de accesibilidad de acuerdo a la NTC 5854 cuyo objeto es “establecer los requisitos de accesibilidad
-                            que son aplicables a las páginas web, que se presentan agrupados en tres niveles de conformidad: A, AA, y AAA.”
-
-                        </li>
+                        <li style="text-align: justify ">Asesoría y diseño de páginas web accesibles: Gifs, subtitulación, voz, Lengua de Señas Colombiana y audio descripción.</li>
                         <br>
                         <li style="text-align: justify ">Adaptación de puestos de trabajo existentes para usuarios con discapacidad.</li>
                         <br>
